@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <!-- app bullshit -->
+
+    <app title="Friday Night Funkin': VS Sonic.exe" file="Sonic" packageName="com.terminalangst.snick"/>
+    <app package="com.terminalangst.snick" main="Main" version="0.2.7" company="Terminalangst" />
+
+    <window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-high-dpi="true" />
+    <window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
+
+    <!-- engine configs -->
+
+    <define name="MODS_ALLOWED" if="desktop" />
+    <define name="VIDEOS_ALLOWED" if="cpp" />
+    <define name="DISCORD_ALLOWED" if="cpp"/>
+
+    <!-- classpath shit -->
+
+    <classpath name="src" />
+
+    <setenv name="HAXEPATH" value="./"/>
+
+    <set name="BUILD_DIR" value="export/debug" if="debug" />
+    <set name="BUILD_DIR" value="export/release" unless="debug" />
+    <set name="BUILD_DIR" value="export/32bit" if="32bits" />
+    <set name="BUILD_DIR" value="${BUILD_DIR}-tracy" if="FEATURE_DEBUG_TRACY"/>
+
+    <assets path='assets/embeds' rename='assets' embed="true" />
+    <assets path="assets/game" rename="assets"/>
+
+    <assets path='content' embed='false' if="MODS_ALLOWED"/>
+
+    <section if="desktop">
+        <assets path="projFiles/alsoft.ini" rename="alsoft.ini" type="text" if="windows"/>
+        <assets path="projFiles/alsoft.ini" rename="alsoft.conf" type="text" unless="windows"/>
+    </section>
+
+    <!-- libs -->
+
+    <haxelib name="openfl"/>
+
+    <haxelib name="flixel" version="6.0.0"/>
+    <haxelib name="flixel-addons" version="3.3.2"/>
+    <haxelib name="flixel-ui" version="2.6.4"/>
+
+    <haxelib name="hscript-iris" version="1.1.3"/>
+
+    <haxelib name="flixel-animate"/>
+    <haxelib name="moonchart"/>
+
+    <haxelib name="haxeui-core" />
+    <haxelib name="haxeui-flixel" />
+
+    <haxelib name="funkin.vis"/>
+    <haxelib name="grig.audio"/>
+    <haxelib name="json2object"/>
+    <haxelib name="json5hx"/>
+
+    <haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED" version="1.2.4"/>
+    <haxelib name="hxvlc" if="VIDEOS_ALLOWED"/>
+
+    <!-- miscellaneous -->
+
+    <haxeflag name="--macro" value="addMetadata('@:build(funkin.backend.macro.FlxMacro.buildFlxSprite())', 'flixel.FlxSprite')" />
+    <haxeflag name="--macro" value="addMetadata('@:build(funkin.backend.macro.FlxMacro.buildFlxBasic())', 'flixel.FlxBasic')" />
+    <haxeflag name="--macro" value="addMetadata('@:build(funkin.backend.macro.FlxMacro.buildFlxCamera())', 'flixel.FlxCamera')" />
+
+    <haxeflag name="--macro" value="include('funkin')" />
+    <haxeflag name="--macro" value="include('flixel.addons',true,['flixel.addons.nape.*','flixel.addons.editors.*'])" />
+    <haxeflag name="--macro" value="include('flixel.effects', true)"/>
+
+    <haxeflag name="-dce no" />
+
+    <haxedef name="haxeui_dont_impose_base_class"/>
+    <haxedef name="haxeui_focus_out_on_click"/>
+
+    <define name="hscriptPos"/>
+
+    <section if="FEATURE_DEBUG_TRACY">
+        <haxedef name="HXCPP_TELEMETRY"/>
+        <haxedef name="HXCPP_TRACY"/>
+        <haxedef name="HXCPP_TRACY_MEMORY"/>
+        <haxedef name="HXCPP_TRACY_ON_DEMAND"/>
+        <haxedef name="absolute-paths"/>
+    </section>
+
+    <haxedef name="CRASH_HANDLER"/>
+
+    <haxedef name="HXCPP_CHECK_POINTER" if="CRASH_HANDLER"/>
+    <haxedef name="HXCPP_STACK_LINE" if="CRASH_HANDLER"/>
+    <haxedef name="HXCPP_STACK_TRACE" if="CRASH_HANDLER"/>
+
+    <haxedef name="FLX_NO_HEALTH" />
+
+    <haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+
+    <haxedef name="FLX_NO_DEBUG" unless="debug" />
+
+    <haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
+
+    <haxedef name="message.reporting" value="pretty" />
+
+    <haxedef name="no-deprecation-warnings"/>
+
+    <assets path='projFiles/icon/iconOG.png' rename='icon.png' if="linux" />
+
+    <icon path="projFiles/icon/icon16.png" size='16'/>
+    <icon path="projFiles/icon/icon32.png" size='32'/>
+    <icon path="projFiles/icon/icon64.png" size='64'/>
+    <icon path="projFiles/icon/iconOG.png" />
+</project>

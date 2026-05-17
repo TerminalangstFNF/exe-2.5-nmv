@@ -1,0 +1,44 @@
+{
+	"storyName": "",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"songs": [
+        [
+			"too-slow",
+			"xeno1",
+			[
+				165,
+				165,
+				165
+			]
+		],
+		[
+			"you-cant-run",
+			"xeno2",
+			[
+				165,
+				165,
+				165
+			]
+		],
+		[
+			"triple-trouble",
+			"xeno3",
+			[
+				165,
+				165,
+				165
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Tutorial"
+}

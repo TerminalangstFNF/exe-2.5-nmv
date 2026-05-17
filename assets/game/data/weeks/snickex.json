@@ -1,0 +1,35 @@
+{
+	"storyName": "",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"songs": [
+        [
+			"endless",
+			"majin",
+			[
+				165,
+				165,
+				165
+			]
+		],
+		[
+			"cycles",
+			"lordx",
+			[
+				165,
+				165,
+				165
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "Tutorial"
+}
