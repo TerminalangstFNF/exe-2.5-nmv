@@ -7,7 +7,7 @@ import funkin.FunkinAssets;
 class Splash extends flixel.FlxState {
     var _cachedAutoPause:Bool;
     
-    #if VIDEOS_ALLOWED video:FunkinVideoSprite;#end
+    #if VIDEOS_ALLOWED var video:FunkinVideoSprite; #end
 
     override function create() {
         super.create();
