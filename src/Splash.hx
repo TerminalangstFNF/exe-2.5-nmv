@@ -27,7 +27,7 @@ class Splash extends flixel.FlxState {
             });
             video.onEnd(finish);
             if (video.load(Paths.video('intro'))) video.delayAndStart();
-			else
+			else trace('what the fuck bro!');
         #end
     }
 
@@ -49,7 +49,7 @@ class Splash extends flixel.FlxState {
         #end
 
         FlxG.sound.muted = FlxG.save.data.muted;
-        FlXG.sound.volume = FlxG.save.data.volume;
+        FlxG.sound.volume = FlxG.save.data.volume;
 
         FlxG.autoPause = _cachedAutoPause;
 
