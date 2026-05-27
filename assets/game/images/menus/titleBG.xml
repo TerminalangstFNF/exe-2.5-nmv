@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Tex-Packer-EX v0.7.1 https://kitzsh.github.io/tex-packer-ex
+-->
+<TextureAtlas imagePath="titleBG.png" width="7920" height="248">
+  <SubTexture name="TitleMenuSSBG instance 10000.png" x="0" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10001.png" x="440" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10002.png" x="880" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10003.png" x="1320" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10004.png" x="1760" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10005.png" x="2200" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10006.png" x="2640" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10007.png" x="3080" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10008.png" x="3520" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10009.png" x="3960" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10010.png" x="4400" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10011.png" x="4840" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10012.png" x="5280" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10013.png" x="5720" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10014.png" x="6160" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10015.png" x="6600" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10016.png" x="7040" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+  <SubTexture name="TitleMenuSSBG instance 10017.png" x="7480" y="0"  width="440" height="248" frameX="-0" frameY="-0" frameWidth="440" frameHeight="248"/>
+</TextureAtlas>
